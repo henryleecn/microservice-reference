@@ -1,0 +1,32 @@
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+
+server.port: 8080  
+# disable Ribbon's cicruit breaker and rely soley on Hystrix.
+# this helps to avoid confusion.
+# see https://github.com/Netflix/ribbon/issues/15
+niws:
+  loadbalancer:
+    availabilityFilteringRule:
+      filterCircuitTripped: false
+geolocation.distance: 40
+node.server.url: http://your-server-host:3000
+
+api.version: 2.0
+
+service:
+  version:
+    zuul: 2
+    sales: 2.0
+    bids: 2.0
+    users: 1.0
+    saleswithbid: 2.0 
+    
+saleswithbid-1.0:   
+  ribbon:
+    ConnectTimeout: 10000
+    ReadTimeout: 6000
+    MaxAutoRetries: 2
+    MaxAutoRetriesNextServer: 2
+    OkToRetryOnAllOperations: 2
+    ServerListRefreshInterval: 5000
+

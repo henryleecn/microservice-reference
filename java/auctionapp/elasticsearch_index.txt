@@ -1,0 +1,208 @@
+# ngram index settings
+
+{
+  "settings": {
+    "analysis": {
+      "filter": {
+        "myNGramFilter": {
+          "type": "edgeNGram",
+          "min_gram": 1,
+          "max_gram": 40
+        }
+      },
+      "analyzer": {
+        "myNGramAnalyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "myNGramFilter"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "_default_": {
+      "_source": {
+        "includes": [
+          "meta.*","doc.name"
+        ]
+      },
+      "properties": {
+        "meta": {
+          "type": "object",
+          "include_in_all": "false"
+        }
+      }
+    },
+    "couchbaseCheckpoint": {
+      "dynamic_templates": [
+        {
+          "store_no_index": {
+            "match": "*",
+            "mapping": {
+              "index": "no",
+              "include_in_all": "false",
+              "store": "no"
+            }
+          }
+        }
+      ],
+      "_source": {
+        "includes": [
+          "meta.*",
+          "doc.*"
+        ]
+      },
+      "properties": {
+        "doc": {
+          "properties": {
+            "uuid": {
+              "type": "string",
+              "index": "no",
+              "include_in_all": "false"
+            }
+          },
+          "include_in_all": "false"
+        },
+        "meta": {
+          "type": "object",
+          "include_in_all": "false"
+        }
+      }
+    },
+    "couchbaseDocument": {
+      "_source": {
+        "includes": [
+          "meta.*"
+        ]
+      },
+      "properties": {
+        "doc": {
+          "properties": {
+            "createdByName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "reservePrice": {
+              "type": "double"
+            },
+            "registeredDate": {
+              "type": "date"
+            },
+            "saleId": {
+              "type": "string"
+            },
+            "@type": {
+              "type": "string"
+            },
+            "displayName": {
+              "type": "string"
+            },
+            "roles": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "enabled": {
+              "type": "boolean"
+            },
+            "unlocked": {
+              "type": "boolean"
+            },
+            "password": {
+              "type": "string"
+            },
+            "imageURL": {
+              "type": "string"
+            },
+            "msrp": {
+              "type": "double"
+            },
+            "startTime": {
+              "type": "date"
+            },
+            "id": {
+              "type": "string"
+            },
+            "startPrice": {
+              "type": "double"
+            },
+            "amount": {
+              "type": "double"
+            },
+            "thumbnail": {
+              "type": "string"
+            },
+            "address": {
+              "type": "string"
+            },
+            "credentialsNonExpired": {
+              "type": "boolean"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "createdDate": {
+              "type": "date"
+            },
+            "phoneNumber": {
+              "type": "string"
+            },
+            "createdBy": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string",
+              "analyzer": "myNGramAnalyzer",
+              "search_analyzer": "standard"
+            },
+            "accountNonExpired": {
+              "type": "boolean"
+            },
+            "_class": {
+              "type": "string"
+            },
+            "endTime": {
+              "type": "date"
+            },
+            "currencyCode": {
+              "type": "string"
+            },
+            "open": {
+              "type": "boolean"
+            },
+            "username": {
+              "type": "string"
+            }
+          }
+        },
+        "meta": {
+          "properties": {
+            "flags": {
+              "type": "long",
+              "include_in_all": "false"
+            },
+            "expiration": {
+              "type": "long",
+              "include_in_all": "false"
+            },
+            "rev": {
+              "type": "string",
+              "include_in_all": "false"
+            },
+            "id": {
+              "type": "string",
+              "include_in_all": "false"
+            }
+          },
+          "include_in_all": "false"
+        }
+      }
+    }
+  }
+}

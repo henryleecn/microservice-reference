@@ -1,0 +1,4 @@
+node.server.url=http://localhost:3000
+sale.service.url=http://your-server-host:9001/sales
+bid.service.url=http://your-server-host:9002/bids
+user.service.url=http://your-server-host:9000/users

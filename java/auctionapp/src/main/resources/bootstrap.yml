@@ -1,0 +1,14 @@
+spring:
+ application:
+  name: auction-app
+    
+ cloud:
+  config:
+   uri: http://your-server-host:8888
+   failFast: true
+   retry:
+    initialInterval: 10000
+    multiplier: 1.1
+    maxInterval: 10000
+    maxAttempts: 3
+    

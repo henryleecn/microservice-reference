@@ -1,0 +1,235 @@
+/*Custom CSS*/
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+}
+
+.navbar-toggle {
+    z-index: 3;
+}
+
+.prodctlist {
+    margin: 30px 0px;
+    padding: 0 56px;
+    text-align: center;
+    min-height: 210px;
+}
+
+.prodctlist a {
+    text-decoration: none;
+    color: black;
+}
+
+.singleproduct {
+    margin-top: 50px;
+}
+
+.login-fullwidth {
+    height: 100% !important;
+}
+
+.singleproduct img {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+.singleproduct h1 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-align: left;
+    text-transform: none;
+}
+
+input[type="text"] {
+    padding-left: 6px;
+}
+
+.animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    vertical-align: top;
+}
+
+.container {
+    padding: 0 69px;
+}
+
+.formcontainer {
+    width: 50%;
+}
+
+.error {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    position: absolute;
+    top: 50px;
+}
+
+.msg {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.prodctlist img {
+    width: 71px;
+    height: 82px;
+}
+
+.prodctlist h3 {
+    font-size: 18px;
+    line-height: 16px;
+}
+
+.clearleft {
+    padding-left: 0;
+}
+
+.navbar-default {
+    background: black;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+}
+
+#form-box {
+    background:;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: tomato;
+}
+
+.themeForm {
+    background: white;
+    width: 40%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+    font-family: lato;
+    position: relative;
+    color: #333;
+    border-radius: 10px;
+    top: 0px;
+}
+
+.form-header {
+    background: #FF3838;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 10px 10px 0 0;
+}
+
+.themeForm label {
+    margin-left: 20px;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.themeForm span {
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    position: relative;
+    color: red;
+    display: inline-b;
+}
+
+span.error {
+    margin-left: 20px;
+    color: red;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.themeForm input, select, textarea {
+    display: block;
+    width: 78%;
+    margin-left: 20px;
+    padding: 5px 20px;
+    font-size: 1em;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.themeForm input[type="submit"], button[type="submit"] {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    left: 39%;
+    transform: translate(-50%, 0);
+    font-family: inherit;
+    color: white;
+    background: #FF3838;
+    outline: none;
+    border: none;
+    padding: 5px 15px;
+    font-size: 1.3em;
+    font-weight: 400;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.4);
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.themeForm a, .themeForm a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-brand:hover
+    {
+    color: red;
+}
+
+form#sale {
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .themeForm {
+        width: 100%;
+    }
+    form#sale {
+        margin-top: 0;
+    }
+    .themeForm h2 {
+        text-align: center;
+    }
+}

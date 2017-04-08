@@ -1,0 +1,12 @@
+design_docs=sale,user,bid
+sale.views=by_user,all
+user.views=all,by_username
+bid.views=by_sale
+sale.by_user=function (doc, meta) { if(doc._class=='in.zaidi.engineering.auctions.api.Sale'){emit(doc.createdBy, null);  }  }
+sale.by_user.reduce=
+sale.all=function (doc, meta) { if(doc._class == 'in.zaidi.engineering.auctions.api.Sale') { emit(meta.id, null); } }
+sale.all.reduce=_count
+user.all=function (doc, meta) { if(doc._class == 'in.zaidi.engineering.auctions.api.User') { emit(meta.id, null); } }
+user.all.reduce=_count
+user.by_username=function (doc, meta) { if(doc._class == 'in.zaidi.engineering.auctions.api.User') { emit(doc.username, null); } }
+bid.by_sale=function (doc, meta) { if(doc._class=='in.zaidi.engineering.auctions.api.Bid'){emit(doc.saleId, null);  }  }

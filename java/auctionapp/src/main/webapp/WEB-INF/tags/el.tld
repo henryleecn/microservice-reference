@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+    version="2.1">
+
+    <description>Common EL functions</description>
+    <display-name>Spring EL</display-name>
+    <tlib-version>1.0</tlib-version>
+    <short-name>el</short-name>
+    <uri>http://zaidi.in/el-functions</uri>
+
+    <function>
+        <name>allCurrencies</name>
+        <function-class>java.util.Currency</function-class>
+        <function-signature>java.util.Set getAvailableCurrencies()</function-signature>
+    </function>
+
+
+</taglib>

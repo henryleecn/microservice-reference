@@ -1,0 +1,9 @@
+api:
+ version: 2
+
+service:
+ version:
+  bids: 2.0
+  users: 1.0
+  sales: 2.0 
+  saleswithbid: 2.0

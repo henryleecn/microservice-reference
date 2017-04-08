@@ -1,0 +1,7 @@
+java/lnd.zip
+*.log
+node/place bid/node_modules/
+*.class
+*.settings
+**/target
+**/bin

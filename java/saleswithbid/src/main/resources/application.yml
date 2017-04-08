@@ -1,0 +1,8 @@
+api:
+  version: 2.0
+
+service:
+  version:
+    zuul: 2
+    sales: 2.0
+ 

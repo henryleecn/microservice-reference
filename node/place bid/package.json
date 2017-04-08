@@ -1,0 +1,19 @@
+{
+  "name": "place-bid-socket-io",
+  "description": "Placing Bid socket io",
+  "version": "0.1.0",
+  
+  "dependencies": {
+    "express":"~4.13.4",
+	"http-proxy":"~1.13.2",
+	"inherits":"~2.0.1",
+	"mime-db":"~1.23.0",
+	"socket.io":"~1.4.6",
+	"body-parser":"~1.15.1",
+	"cookie-parser":"~1.4.2",
+	"querystring":"~0.2.0",
+	"cors":"~2.7.1",
+	"request":"~2.72.0"
+  }
+  
+}
