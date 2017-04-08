@@ -1,6 +1,7 @@
-# Microservices Accelerator
+# Microservices Reference
 
-This project is a reference application to be used as a template for building headless applications using Micro-services
+This project is a reference application to be used as a quick start for building microservice using Spring cloud stack.
+It uses Couchbase server and elasticsearch and couchbase-elasticsearch-transport plugin too.
 The project consists of these sub-projects
 
 * [Bid Microservice](https://github.com/saiyedzaidi/microservice-reference/tree/master/java/bidservice)
